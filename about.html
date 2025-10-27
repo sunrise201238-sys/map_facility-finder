@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title data-i18n="about.title">設施搜尋器 · 關於網站</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <div class="brand-row">
+      <a href="index.html" class="site-name" data-i18n="home.app">設施搜尋器</a>
+      <nav class="nav">
+        <a href="index.html" data-i18n="nav.home">首頁</a>
+        <a href="map.html"   data-i18n="nav.map">地圖</a>
+        <a href="about.html" data-i18n="nav.about">關於網站</a>
+        <a href="legal.html" data-i18n="nav.legal">版權</a>
+      </nav>
+    </div>
+    <div class="breadcrumbs">
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <span class="sep">›</span>
+      <span data-i18n="nav.about">About</span>
+    </div>
+  </div>
+</header>
+
+
+<main class="container">
+  <section class="card">
+    <div class="head" data-i18n="about.h1">關於</div>
+    <div class="body">
+      <p data-i18n="about.body1">本工具以 OpenStreetMap（OSM）公開資料為基礎，透過 Overpass API 即時查詢，在地圖上以您指定的中心點與半徑進行周遭設施檢索。</p>
+      <p data-i18n="about.body2">由於資料來自社群編輯，若發現遺漏或錯誤，歡迎回到 OSM 編輯修正；通常只要幾分鐘至數小時，就能在這裡查詢到最新結果。</p>
+      <p data-i18n="about.body3">網站不儲存您的個人資料；僅在您同意時使用瀏覽器地理位置 API 取得座標，以便快速定位。</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    © 2025 | <span data-i18n="legal.credit">地圖資料 © OpenStreetMap 貢獻者 · Tiles via OSM · Built with Leaflet</span>
+  </div>
+</footer>
+
+<!-- 語言切換：左下角固定 -->
+<div class="lang-dock">
+  <span class="lang-label" data-i18n="footer.lang">語言</span>：
+  <button type="button" class="lang-btn"
+          onclick="setLang('zh-Hant')" data-i18n="footer.zh" aria-current="false">繁體中文</button>
+  <button type="button" class="lang-btn"
+          onclick="setLang('en')" data-i18n="footer.en" aria-current="false">English</button>
+</div>
+
+<script src="assets/i18n.js"></script>
+</body>
+</html>
