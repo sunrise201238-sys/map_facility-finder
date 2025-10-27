@@ -1,0 +1,59 @@
+{
+  "home.app": "Facility Finder",
+  "home.title": "Facility Finder · Home",
+  "home.quick": "Get Started",
+  "home.lead": "Search facilities within a radius on the map. Currently supports:",
+  "home.cta": "Open the map",
+
+  "nav.home": "Home",
+  "nav.map": "Map",
+  "nav.about": "About",
+  "nav.legal": "Legal",
+
+  "map.title": "Facility Finder · Map",
+  "map.panel.search": "Search",
+  "map.panel.map": "Map",
+  "map.panel.results": "Status & Results",
+  "map.radius": "Radius (m)",
+  "map.radius.help": "Use the slider or input to adjust the search radius (50–2000m).",
+  "map.place.label": "Enter a place/landmark; suggestions will appear shortly.",
+  "map.place.placeholder": "e.g. Zhongxiao Fuxing, Taipei Main Station",
+  "map.btn.search": "Search",
+  "map.btn.myloc": "Use my location",
+  "map.cat": "Category",
+
+  "map.status.ready": "Ready.",
+  "map.status.searching": "Searching...",
+  "map.status.overpassFail": "Overpass API failed or timed out. Please try again later.",
+
+  "legend.center": "Center",
+
+  "cat.temple": "Place of worship",
+  "cat.grave": "Cemetery",
+  "cat.fuel": "Fuel",
+  "cat.cafe": "Internet café",
+  "cat.arcade": "Amusement arcade",
+
+  "cat.temple.long": "Place of worship (amenity=place_of_worship)",
+  "cat.grave.long": "Cemetery (landuse=cemetery or amenity=grave_yard)",
+  "cat.fuel.long": "Fuel (amenity=fuel)",
+  "cat.cafe.long": "Internet café (amenity=internet_cafe)",
+  "cat.arcade.long": "Amusement arcade (leisure=amusement_arcade)",
+
+  "about.title": "Facility Finder · About",
+  "about.h1": "About",
+  "about.body1": "This tool is based on OpenStreetMap (OSM) open data and queries Overpass API in real time to search around your chosen center and radius.",
+  "about.body2": "Because the data is community-edited, corrections on OSM usually appear here within minutes to hours.",
+  "about.body3": "We do not store personal data; your browser’s Geolocation API is used only with your consent for quick positioning.",
+
+  "legal.title": "Facility Finder · Legal",
+  "legal.h1": "Licensing & Disclaimer",
+  "legal.li1": "Basemap and names © OpenStreetMap contributors under ODbL / CC BY-SA.",
+  "legal.li2": "Query service: Overpass API with rate limits; if a server temporarily fails, the site retries via mirror endpoints.",
+  "legal.li3": "Results are for reference only; accuracy and timeliness are not guaranteed.",
+  "legal.credit": "Map data © OpenStreetMap contributors · Tiles via OSM · Built with Leaflet",
+
+  "footer.lang": "Language",
+  "footer.zh": "繁體中文",
+  "footer.en": "English"
+}
