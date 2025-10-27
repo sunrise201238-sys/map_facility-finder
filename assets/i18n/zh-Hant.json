@@ -1,0 +1,59 @@
+{
+  "home.app": "設施搜尋器",
+  "home.title": "設施搜尋器 · 首頁",
+  "home.quick": "快速開始",
+  "home.lead": "在地圖上搜尋指定半徑內的設施。目前支援：",
+  "home.cta": "開啟地圖",
+
+  "nav.home": "首頁",
+  "nav.map": "地圖",
+  "nav.about": "關於網站",
+  "nav.legal": "版權",
+
+  "map.title": "設施搜尋器 · 地圖",
+  "map.panel.search": "地圖搜尋",
+  "map.panel.map": "地圖",
+  "map.panel.results": "狀態與結果",
+  "map.radius": "半徑（公尺）",
+  "map.radius.help": "滑桿或輸入調整搜尋半徑（50–2000m）。",
+  "map.place.label": "輸入地點（地標、地名），建議選項會在稍候顯示。",
+  "map.place.placeholder": "例如：忠孝復興站、台北車站",
+  "map.btn.search": "搜尋",
+  "map.btn.myloc": "使用我的位置",
+  "map.cat": "類別",
+
+  "map.status.ready": "完成。",
+  "map.status.searching": "查詢中…",
+  "map.status.overpassFail": "Overpass 服務失敗或逾時，請稍後再試。",
+
+  "legend.center": "中心點",
+
+  "cat.temple": "宗教場所",
+  "cat.grave": "墓地",
+  "cat.fuel": "加油站",
+  "cat.cafe": "網咖",
+  "cat.arcade": "電子遊樂場",
+
+  "cat.temple.long": "宗教場所（amenity=place_of_worship）",
+  "cat.grave.long": "墓地（landuse=cemetery 或 amenity=grave_yard）",
+  "cat.fuel.long": "加油站（amenity=fuel）",
+  "cat.cafe.long": "網咖（amenity=internet_cafe）",
+  "cat.arcade.long": "電子遊樂場（leisure=amusement_arcade）",
+
+  "about.title": "設施搜尋器 · 關於網站",
+  "about.h1": "關於",
+  "about.body1": "本工具以 OpenStreetMap（OSM）公開資料為基礎，透過 Overpass API 即時查詢，在地圖上以您指定的中心點與半徑進行周遭設施檢索。",
+  "about.body2": "由於資料來自社群編輯，若發現遺漏或錯誤，歡迎回到 OSM 編輯修正；通常只要幾分鐘至數小時，就能在這裡查詢到最新結果。",
+  "about.body3": "網站不儲存您的個人資料；僅在您同意時使用瀏覽器地理位置 API 取得座標，以便快速定位。",
+
+  "legal.title": "設施搜尋器 · 版權",
+  "legal.h1": "授權與免責",
+  "legal.li1": "底圖與地名資料：© OpenStreetMap 貢獻者，依 ODbL 與 CC BY-SA 提供。",
+  "legal.li2": "查詢服務：Overpass API，採取流量限制；若遇暫時失效，本站會自動切換鏡像端點再嘗試。",
+  "legal.li3": "本網站僅提供資料檢索結果，不保證即時性與正確性；實際情況仍以現地為準。",
+  "legal.credit": "地圖資料 © OpenStreetMap 貢獻者 · Tiles via OSM · Built with Leaflet",
+
+  "footer.lang": "語言",
+  "footer.zh": "繁體中文",
+  "footer.en": "English"
+}
