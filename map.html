@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title data-i18n="map.title">設施搜尋器 · 地圖</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <div class="brand-row">
+      <a href="index.html" class="site-name" data-i18n="home.app">設施搜尋器</a>
+      <nav class="nav">
+        <a href="index.html" data-i18n="nav.home">首頁</a>
+        <a href="map.html"   data-i18n="nav.map">地圖</a>
+        <a href="about.html" data-i18n="nav.about">關於網站</a>
+        <a href="legal.html" data-i18n="nav.legal">版權</a>
+      </nav>
+    </div>
+    <div class="breadcrumbs">
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <span class="sep">›</span>
+      <span data-i18n="nav.map">Map</span>
+    </div>
+  </div>
+</header>
+
+
+<main class="container">
+  <div class="grid">
+    <aside class="card">
+      <div class="head" data-i18n="map.panel.search">地圖搜尋</div>
+      <div class="body control">
+        <div>
+          <label data-i18n="map.radius">半徑（公尺）</label>
+          <div class="form-row">
+            <input id="radiusInput" type="number" min="50" max="2000" step="50" value="800">
+            <input id="radiusRange" type="range"  min="50" max="2000" step="50" value="800">
+          </div>
+          <div class="circle-note" data-i18n="map.radius.help">滑桿或輸入調整搜尋半徑（50–2000m）。</div>
+        </div>
+
+        <div>
+          <label data-i18n="map.place.label">輸入地點（地標、地名），建議選項會在稍候顯示。</label>
+          <input id="searchBox" type="text"
+                 placeholder="例如：忠孝復興站、台北車站"
+                 data-i18n="map.place.placeholder"
+                 data-i18n-attr="placeholder"
+                 autocomplete="off" autocapitalize="off" spellcheck="false">
+        </div>
+        <button class="btn" id="doSearch" data-i18n="map.btn.search">搜尋</button>
+        <button class="btn secondary" id="useLoc" data-i18n="map.btn.myloc">使用我的位置</button>
+
+        <div>
+          <label data-i18n="map.cat">類別</label>
+          <div class="checkbox-col">
+            <label><input type="checkbox" class="cat" value="temple"> <span data-i18n="cat.temple">宗教場所</span></label>
+            <label><input type="checkbox" class="cat" value="grave">  <span data-i18n="cat.grave">墓地</span></label>
+            <label><input type="checkbox" class="cat" value="fuel">   <span data-i18n="cat.fuel">加油站</span></label>
+            <label><input type="checkbox" class="cat" value="cafe">   <span data-i18n="cat.cafe">網咖</span></label>
+            <label><input type="checkbox" class="cat" value="arcade"> <span data-i18n="cat.arcade">電子遊樂場</span></label>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <section class="card">
+      <div class="head" data-i18n="map.panel.map">地圖</div>
+      <div class="body">
+        <div id="map" style="width:100%;aspect-ratio:1/1;"></div>
+        <div style="padding-top:8px" class="legend">
+          <span class="lg"><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#3FA7F5;border:2px solid #fff;"></span><span data-i18n="legend.center">中心點</span></span>
+          <span class="lg"><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#f59e0b;border:2px solid #fff;"></span><span data-i18n="cat.temple">宗教場所</span></span>
+          <span class="lg"><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#ef4444;border:2px solid #fff;"></span><span data-i18n="cat.grave">墓地</span></span>
+          <span class="lg"><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#10b981;border:2px solid #fff;"></span><span data-i18n="cat.fuel">加油站</span></span>
+          <span class="lg"><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#8b5cf6;border:2px solid #fff;"></span><span data-i18n="cat.cafe">網咖</span></span>
+          <span class="lg"><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#161ef9;border:2px solid #fff;"></span><span data-i18n="cat.arcade">電子遊樂場</span></span>
+        </div>
+      </div>
+    </section>
+
+    <aside class="card">
+      <div class="head" data-i18n="map.panel.results">狀態與結果</div>
+      <div class="body">
+        <div class="status" id="status"><span class="dot"></span><span id="statusText" data-i18n="map.status.ready">完成。</span></div>
+        <div class="count-row" id="counts"></div>
+        <div class="list" id="resultList"></div>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    © 2025 | <span data-i18n="legal.credit">地圖資料 © OpenStreetMap 貢獻者 · Tiles via OSM · Built with Leaflet</span>
+  </div>
+</footer>
+
+<!-- 地圖頁：先載 main.js，再載 i18n.js -->
+<script src="assets/main.js"></script>
+<script src="assets/i18n.js"></script>
+
+<!-- 語言切換：左下角固定 -->
+<div class="lang-dock">
+  <span class="lang-label" data-i18n="footer.lang">語言</span>：
+  <button type="button" class="lang-btn"
+          onclick="setLang('zh-Hant')" data-i18n="footer.zh" aria-current="false">繁體中文</button>
+  <button type="button" class="lang-btn"
+          onclick="setLang('en')" data-i18n="footer.en" aria-current="false">English</button>
+</div>
+
+</body>
+</html>

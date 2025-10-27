@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title data-i18n="legal.title">設施搜尋器 · 版權</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <div class="brand-row">
+      <a href="index.html" class="site-name" data-i18n="home.app">設施搜尋器</a>
+      <nav class="nav">
+        <a href="index.html" data-i18n="nav.home">首頁</a>
+        <a href="map.html"   data-i18n="nav.map">地圖</a>
+        <a href="about.html" data-i18n="nav.about">關於網站</a>
+        <a href="legal.html" data-i18n="nav.legal">版權</a>
+      </nav>
+    </div>
+    <div class="breadcrumbs">
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <span class="sep">›</span>
+      <span data-i18n="nav.legal">Legal</span>
+    </div>
+  </div>
+</header>
+
+
+<main class="container">
+  <section class="card">
+    <div class="head" data-i18n="legal.h1">授權與免責</div>
+    <div class="body">
+      <ul>
+        <li data-i18n="legal.li1">底圖與地名資料：© OpenStreetMap 貢獻者，依 ODbL 與 CC BY-SA 提供。</li>
+        <li data-i18n="legal.li2">查詢服務：Overpass API，採取流量限制；若遇暫時失效，本站會自動切換鏡像端點再嘗試。</li>
+        <li data-i18n="legal.li3">本網站僅提供資料檢索結果，不保證即時性與正確性；實際情況仍以現地為準。</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    © 2025 | <span data-i18n="legal.credit">地圖資料 © OpenStreetMap 貢獻者 · Tiles via OSM · Built with Leaflet</span>
+  </div>
+</footer>
+
+<!-- 語言切換：左下角固定 -->
+<div class="lang-dock">
+  <span class="lang-label" data-i18n="footer.lang">語言</span>：
+  <button type="button" class="lang-btn"
+          onclick="setLang('zh-Hant')" data-i18n="footer.zh" aria-current="false">繁體中文</button>
+  <button type="button" class="lang-btn"
+          onclick="setLang('en')" data-i18n="footer.en" aria-current="false">English</button>
+</div>
+
+<script src="assets/i18n.js"></script>
+</body>
+</html>
